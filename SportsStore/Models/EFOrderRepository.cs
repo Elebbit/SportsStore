@@ -18,6 +18,8 @@ namespace SportsStore.Models
         public IQueryable<Order> Order => context.Orders.Include(o => o.Lines)
             .ThenInclude(l => l.Product);
 
+        public IQueryable<Order> Orders { get; }
+
         public void SaveOrder(Order order)
         {
             context.AttachRange(order.Lines.Select(l => l.Product));
