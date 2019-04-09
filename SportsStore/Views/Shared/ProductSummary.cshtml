@@ -14,12 +14,12 @@
         <input type="hidden" asp-for="ProductID" />
         <input type="hidden" name="returnUrl"
                value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <button type="submit"
+                class="btn btn-success btn-sm float-right">
+            Add To Cart
+        </button>
         <span class="card-text p-1">
             @Model.Description
-            <button type="submit"
-                    class="btn btn-success btn-sm float-right">
-                Add To Cart
-            </button>
         </span>
     </form>
 </div>
